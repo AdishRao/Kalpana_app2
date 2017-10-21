@@ -78,16 +78,29 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
             return;
         }
 
-        mAuth.createUserWithEmailAndPassword(emaild, p)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        //Toast.makeText(this,"Please Enter Username",Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(getApplicationContext(),Profileactivity.class));
+        if(TextUtils.getTrimmedLength(p)<6){
+            Toast.makeText(this,"Password too short",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.equals(p,rp)){
 
 
-                    }
-                });
+            mAuth.createUserWithEmailAndPassword(emaild, p)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+
+                                //Toast.makeText(this,"Please Enter Username",Toast.LENGTH_LONG).show();
+                                startActivity(new Intent(getApplicationContext(), Profileactivity.class));
+                            }
+
+                        }
+                    });
+        }
+        else {
+            Toast.makeText(this,"Entered passwords dont match",Toast.LENGTH_LONG).show();
+        }
 
 
 

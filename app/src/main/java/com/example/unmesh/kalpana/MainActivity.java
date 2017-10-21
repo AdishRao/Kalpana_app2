@@ -83,6 +83,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             startActivity(new Intent(getApplicationContext(),Profileactivity.class));
 
                         }
+                        else
+                            Toast.makeText(getApplicationContext(), "Account does not exist",Toast.LENGTH_LONG).show();
 
                     }
                 });
