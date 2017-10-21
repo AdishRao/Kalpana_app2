@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //to check if the emails are empty
         if (TextUtils.isEmpty(username)){
-            Toast.makeText(this,"Please Enter Username",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Please Enter Email-ID",Toast.LENGTH_LONG).show();
             return;
         }
         if (TextUtils.isEmpty(password)){
