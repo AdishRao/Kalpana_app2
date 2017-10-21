@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
         if (TextUtils.isEmpty(password)){
-            Toast.makeText(this,"Please Enter Username",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Please Enter Password",Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -83,6 +83,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             startActivity(new Intent(getApplicationContext(),Profileactivity.class));
 
                         }
+                        else
+                            Toast.makeText(getApplicationContext(), "Account does not exist",Toast.LENGTH_LONG).show();
 
                     }
                 });
