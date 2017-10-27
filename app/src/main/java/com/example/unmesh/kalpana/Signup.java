@@ -92,7 +92,7 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
                             if (task.isSuccessful()) {
 
                                 //Toast.makeText(this,"Please Enter Username",Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(getApplicationContext(), Profileactivity.class));
+                                startActivity(new Intent(getApplicationContext(), fields.class));
                             }
 
                         }
