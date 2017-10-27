@@ -23,6 +23,7 @@ public class Profileactivity extends AppCompatActivity implements View.OnClickLi
     RadioButton rauto;
     Button confirm;
     EditText username;
+    String setusername;
     FirebaseDatabase Adduserinfo = FirebaseDatabase.getInstance();
     DatabaseReference myRef = Adduserinfo.getReference("Users");
     private FirebaseAuth mAuth;
@@ -47,7 +48,7 @@ public class Profileactivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void addUser() {
-        String setusername = username.getText().toString().trim();
+        setusername = username.getText().toString().trim();
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
         if (!TextUtils.isEmpty(setusername)) {
@@ -74,6 +75,7 @@ public class Profileactivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View view) {
         if (view == confirm) {
             addUser();
+            Toast.makeText(this, "Welcome " + setusername, Toast.LENGTH_LONG).show();
             finish();
             startActivity(new Intent(this, sendreq.class));
         }

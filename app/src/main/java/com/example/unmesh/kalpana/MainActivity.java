@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if(v == loginbtn){
             userLogin();
+            finish();
             startActivity(new Intent(this, sendreq.class));
 
         }
