@@ -1,15 +1,14 @@
 package com.example.unmesh.kalpana;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
-import android.widget.EditText;
-import android.widget.Button;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -92,7 +91,7 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
                             if (task.isSuccessful()) {
 
                                 //Toast.makeText(this,"Please Enter Username",Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(getApplicationContext(), fields.class));
+                                // startActivity(new Intent(getApplicationContext(), fields.class));
                             }
 
                         }
@@ -117,9 +116,8 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
 
         if (v == Signupbtn){
 
-
             registerUser();
-
+            startActivity(new Intent(this, Profileactivity.class));
 
         }
 

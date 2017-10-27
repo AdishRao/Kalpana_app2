@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(mAuth.getCurrentUser() != null){
             //Start the profileactivity after login
             finish();
-           startActivity(new Intent(getApplicationContext(),Profileactivity.class));
+            startActivity(new Intent(getApplicationContext(), sendreq.class));
         }
 
         //get the ui elements
@@ -90,6 +90,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if(v == loginbtn){
             userLogin();
+            startActivity(new Intent(this, sendreq.class));
+
         }
         if(v == Signupt){
             finish();
