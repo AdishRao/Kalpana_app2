@@ -38,6 +38,7 @@ public class sendreq extends AppCompatActivity implements View.OnClickListener {
         sos = (Button) findViewById(R.id);
         confirm.setOnClickListener(this);
 
+
     }
 
     public void sendreq() {
@@ -47,20 +48,24 @@ public class sendreq extends AppCompatActivity implements View.OnClickListener {
 
         if (rfirst.isSelected()) {
             myRef.child("Experts").child("First Aid").child(user.getUid()).setValue("true");
+            myRef.child("Users").child(user.getUid()).child("location").setValue("true");
             Toast.makeText(this, "Request Sent", Toast.LENGTH_LONG).show();
             flag = 0;
         } else if (rtech.isSelected()) {
             myRef.child("Experts").child("Tech").child(user.getUid()).setValue("true");
+            myRef.child("Users").child(user.getUid()).child("location").setValue("true");
             Toast.makeText(this, "Request Sent", Toast.LENGTH_LONG).show();
             flag = 1;
 
         } else if (rauto.isSelected()) {
             myRef.child("Experts").child("Automobile").child(user.getUid()).setValue("true");
+            myRef.child("Users").child(user.getUid()).child("location").setValue("true");
             Toast.makeText(this, "Request Sent", Toast.LENGTH_LONG).show();
             flag = 2;
 
         } else if (rplumb.isSelected()) {
             myRef.child("Experts").child("Plumbing").child(user.getUid()).setValue("true");
+            myRef.child("Users").child(user.getUid()).child("location").setValue("true");
             Toast.makeText(this, "Request Sent", Toast.LENGTH_LONG).show();
             flag = 3;
 
@@ -74,6 +79,7 @@ public class sendreq extends AppCompatActivity implements View.OnClickListener {
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
         myRef.child("Experts").child("SOS").child(user.getUid()).setValue("true");
+        myRef.child("Users").child(user.getUid()).child("location").setValue("true");
         flag = 4;
 
     }
