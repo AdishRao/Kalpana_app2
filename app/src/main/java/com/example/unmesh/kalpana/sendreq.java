@@ -30,12 +30,12 @@ public class sendreq extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sendreq);
 
-        rfirst = (RadioButton) findViewById(R.id);
-        rplumb = (RadioButton) findViewById(R.id);
-        rauto = (RadioButton) findViewById(R.id);
-        rtech = (RadioButton) findViewById(R.id);
-        confirm = (Button) findViewById(R.id);
-        sos = (Button) findViewById(R.id);
+        rfirst = (RadioButton) findViewById(R.id.radioButton3);
+        rplumb = (RadioButton) findViewById(R.id.radioButton4);
+        rauto = (RadioButton) findViewById(R.id.radioButton);
+        rtech = (RadioButton) findViewById(R.id.radioButton2);
+        confirm = (Button) findViewById(R.id.button2);
+        sos = (Button) findViewById(R.id.button3);
         confirm.setOnClickListener(this);
 
 

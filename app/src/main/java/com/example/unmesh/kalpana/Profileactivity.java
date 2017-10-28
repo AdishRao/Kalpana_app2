@@ -35,12 +35,12 @@ public class Profileactivity extends AppCompatActivity implements View.OnClickLi
 
         //Buttons and radio buttons
 
-        rfirst = (RadioButton) findViewById(R.id);
-        rplumb = (RadioButton) findViewById(R.id);
-        rauto = (RadioButton) findViewById(R.id);
-        rtech = (RadioButton) findViewById(R.id);
-        confirm = (Button) findViewById(R.id);
-        username = (EditText) findViewById(R.id);
+        rfirst = (RadioButton) findViewById(R.id.radioButton7);
+        rplumb = (RadioButton) findViewById(R.id.radioButton8);
+        rauto = (RadioButton) findViewById(R.id.radioButton5);
+        rtech = (RadioButton) findViewById(R.id.radioButton6);
+        confirm = (Button) findViewById(R.id.button2);
+        username = (EditText) findViewById(R.id.editText);
 
         confirm.setOnClickListener(this);
 

@@ -25,7 +25,7 @@ public class activerequest extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activerequest);
 
-        cancelreq = (Button) findViewById(R.id);
+        cancelreq = (Button) findViewById(R.id.button4);
 
 
         cancelreq.setOnClickListener(this);
@@ -47,7 +47,7 @@ public class activerequest extends AppCompatActivity implements View.OnClickList
             Toast.makeText(this, "Request Removed", Toast.LENGTH_LONG).show();
         }
         if (flag == 3) {
-            myRef.child("Experts").child("Plumbing").child(user.getUid()).removeValue())
+            myRef.child("Experts").child("Plumbing").child(user.getUid()).removeValue();
             Toast.makeText(this, "Request Removed", Toast.LENGTH_LONG).show();
         }
         if (flag == 4) {
